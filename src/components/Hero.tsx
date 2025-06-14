@@ -2,7 +2,7 @@ import { Calendar, MapPin, Phone, Instagram, Linkedin } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/5511928125091', '_blank');
+    window.open('https://wa.me/55928125091', '_blank');
   };
 
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="space-y-4">
               {/* Logo adicionada aqui */}
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.jpeg" 
                 alt="Logo" 
                 className="w-32 h-auto mb-6"
               />

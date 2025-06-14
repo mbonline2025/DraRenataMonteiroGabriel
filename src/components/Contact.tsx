@@ -3,7 +3,7 @@ import { MapPin, Clock, Phone, Mail, Instagram, Linkedin, Calendar } from 'lucid
 
 const Contact = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/5511928125091', '_blank');
+    window.open('https://wa.me/55928125091', '_blank');
   };
 
   return (
