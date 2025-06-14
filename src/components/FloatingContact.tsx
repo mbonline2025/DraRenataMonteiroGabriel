@@ -27,18 +27,6 @@ const FloatingContact = () => {
           WhatsApp
         </span>
       </button>
-
-      {/* Telefone */}
-      <button
-        onClick={handlePhoneClick}
-        className="bg-brand-primary hover:bg-brand-primary/90 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 group"
-        title="Ligar agora"
-      >
-        <Phone size={24} />
-        <span className="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-          Ligar
-        </span>
-      </button>
     </div>
   );
 };
