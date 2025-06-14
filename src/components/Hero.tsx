@@ -1,8 +1,13 @@
-import { Calendar, MapPin, Phone, Instagram, Linkedin } from 'lucide-react';
+
+import { Calendar, MapPin, Phone, Linkedin } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/55928125091', '_blank');
+    window.open('https://wa.me/5592812509912', '_blank');
+  };
+
+  const handleLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/renata-monteiro-3168091a9/', '_blank');
   };
 
   return (
@@ -11,15 +16,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="space-y-4">
-              {/* Logo adicionada aqui */}
-              <img 
-                src="/images/logo.jpeg" 
-                alt="Logo" 
-                className="w-32 h-auto mb-6"
-              />
-
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                Bem-vinda(o)!
+                Bem-vinda(o) ao <span className="text-brand-primary">ReumaVida</span>!
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Sou médica <span className="text-brand-primary font-semibold">reumatologista</span>, especialista no cuidado de pessoas que convivem com doenças autoimunes, dores crônicas e inflamações articulares.
@@ -58,14 +56,13 @@ const Hero = () => {
                   <Phone size={18} />
                   WhatsApp
                 </button>
-                <a href="#" className="flex items-center gap-2 text-brand-primary hover:text-brand-primary/80 transition-colors">
-                  <Instagram size={18} />
-                  Instagram
-                </a>
-                <a href="#" className="flex items-center gap-2 text-brand-primary hover:text-brand-primary/80 transition-colors">
+                <button 
+                  onClick={handleLinkedIn}
+                  className="flex items-center gap-2 text-brand-primary hover:text-brand-primary/80 transition-colors"
+                >
                   <Linkedin size={18} />
                   LinkedIn
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -75,8 +72,19 @@ const Hero = () => {
               <div className="absolute top-4 right-4 w-24 h-24 bg-brand-secondary/20 rounded-full opacity-50"></div>
               <div className="absolute bottom-4 left-4 w-16 h-16 bg-brand-primary/20 rounded-full opacity-30"></div>
               <div className="relative z-10 text-center">
-                <div className="w-32 h-32 bg-brand-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold">
-                  DRM
+                <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="ReumaVida Logo" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="w-32 h-32 bg-brand-primary rounded-full flex items-center justify-center text-white text-4xl font-bold hidden">
+                    RV
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Dra. Renata Monteiro Gabriel</h3>
                 <p className="text-brand-secondary font-semibold mb-4">Médica Reumatologista</p>
@@ -87,7 +95,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

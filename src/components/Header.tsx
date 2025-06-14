@@ -21,7 +21,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <Phone size={14} />
-              <span>(92) 812-5091</span>
+              <span>+55 92 8125-0912</span>
             </div>
             <div className="flex items-center gap-1">
               <MapPin size={14} />
@@ -39,12 +39,21 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
-                DR
+              <img 
+                src="/images/logo.png" 
+                alt="ReumaVida Logo" 
+                className="w-12 h-12 object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold text-lg hidden">
+                RV
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-800">Dra. Renata Monteiro Gabriel</h1>
-                <p className="text-sm text-brand-secondary">Reumatologista CRM-SP</p>
+                <h1 className="text-xl font-bold text-gray-800">ReumaVida</h1>
+                <p className="text-sm text-brand-secondary">Dra. Renata Monteiro Gabriel - Reumatologista CRM-SP</p>
               </div>
             </div>
 

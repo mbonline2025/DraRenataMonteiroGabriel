@@ -9,12 +9,21 @@ const Footer = () => {
           {/* Logo e descrição */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold">
-                DR
+              <img 
+                src="/images/logo.png" 
+                alt="ReumaVida Logo" 
+                className="w-10 h-10 object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold hidden">
+                RV
               </div>
               <div>
-                <h3 className="text-lg font-bold">Dra. Renata Monteiro Gabriel</h3>
-                <p className="text-sm text-brand-light/80">Reumatologista</p>
+                <h3 className="text-lg font-bold">ReumaVida</h3>
+                <p className="text-sm text-brand-light/80">Dra. Renata Monteiro Gabriel - Reumatologista</p>
               </div>
             </div>
             <p className="text-brand-light/90 text-sm leading-relaxed">
@@ -29,11 +38,11 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
                 <Phone size={16} className="text-brand-secondary" />
-                <span>(92) 812-5091</span>
+                <span>+55 92 8125-0912</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Mail size={16} className="text-brand-secondary" />
-                <span>contato@drarenatamonteiro.com.br</span>
+                <span>contato@reumavida.com.br</span>
               </div>
               <div className="flex items-start gap-2 text-sm">
                 <MapPin size={16} className="text-brand-secondary mt-0.5 flex-shrink-0" />
@@ -59,7 +68,7 @@ const Footer = () => {
         <div className="border-t border-brand-light/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-brand-light/70">
-              © 2024 Dra. Renata Monteiro Gabriel. Todos os direitos reservados.
+              © 2024 ReumaVida - Dra. Renata Monteiro Gabriel. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-2 text-sm text-brand-light/70">
               <span>Feito com</span>

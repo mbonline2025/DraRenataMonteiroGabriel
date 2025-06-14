@@ -1,9 +1,13 @@
 
-import { MapPin, Clock, Phone, Mail, Instagram, Linkedin, Calendar } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, Linkedin, Calendar } from 'lucide-react';
 
 const Contact = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/55928125091', '_blank');
+    window.open('https://wa.me/5592812509912', '_blank');
+  };
+
+  const handleLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/renata-monteiro-3168091a9/', '_blank');
   };
 
   return (
@@ -46,7 +50,7 @@ const Contact = () => {
                   <Phone className="text-brand-secondary mt-1 flex-shrink-0" size={24} />
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Telefone</h4>
-                    <p className="text-gray-600">(11) 92812-5091</p>
+                    <p className="text-gray-600">+55 92 8125-0912</p>
                   </div>
                 </div>
 
@@ -54,7 +58,7 @@ const Contact = () => {
                   <Mail className="text-brand-secondary mt-1 flex-shrink-0" size={24} />
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">E-mail</h4>
-                    <p className="text-gray-600">contato@drarenatamonteiro.com.br</p>
+                    <p className="text-gray-600">contato@reumavida.com.br</p>
                   </div>
                 </div>
               </div>
@@ -62,15 +66,14 @@ const Contact = () => {
 
             <div className="bg-white p-8 rounded-lg shadow-md border border-brand-primary/10">
               <h3 className="text-xl font-bold text-gray-800 mb-6">Redes Sociais</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="flex items-center gap-3 p-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-shadow">
-                  <Instagram size={24} />
-                  <span className="font-medium">Instagram</span>
-                </a>
-                <a href="#" className="flex items-center gap-3 p-4 bg-brand-primary text-white rounded-lg hover:shadow-lg transition-shadow">
+              <div className="flex justify-center">
+                <button 
+                  onClick={handleLinkedIn}
+                  className="flex items-center gap-3 p-4 bg-brand-primary text-white rounded-lg hover:shadow-lg transition-shadow"
+                >
                   <Linkedin size={24} />
                   <span className="font-medium">LinkedIn</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>

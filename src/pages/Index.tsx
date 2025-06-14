@@ -6,6 +6,8 @@ import Services from '../components/Services';
 import UsefulInfo from '../components/UsefulInfo';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Chatbot from '../components/Chatbot';
+import FloatingContact from '../components/FloatingContact';
 
 const Index = () => {
   return (
@@ -17,6 +19,8 @@ const Index = () => {
       <UsefulInfo />
       <Contact />
       <Footer />
+      <Chatbot />
+      <FloatingContact />
     </div>
   );
 };
