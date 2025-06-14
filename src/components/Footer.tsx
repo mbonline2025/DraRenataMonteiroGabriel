@@ -70,11 +70,6 @@ const Footer = () => {
             <p className="text-sm text-brand-light/70">
               © 2024 ReumaVida - Dra. Renata Monteiro Gabriel. Todos os direitos reservados.
             </p>
-            <div className="flex items-center gap-2 text-sm text-brand-light/70">
-              <span>Feito com</span>
-              <Heart size={16} className="text-red-400" />
-              <span>para cuidar da sua saúde</span>
-            </div>
           </div>
         </div>
       </div>
